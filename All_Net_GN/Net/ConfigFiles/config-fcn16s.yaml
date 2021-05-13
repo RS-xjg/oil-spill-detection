@@ -1,0 +1,19 @@
+# Training configs for Seg
+
+dataset : Crack Dataset
+n_classes : 6
+ignore_index : 255
+net : fcn16s
+optimizer : SGD
+scheduler : StepLR
+lr : 0.0001
+batchsize : 4
+start_epoch : 0
+end_epoch : 100
+result_dir : "./result-fcn16s"
+criterion : CrossEntropy
+logIterval : 20
+valIterval : 2
+resume : 
+  flag : False
+  state_path : "./checkpoints/example.pth"

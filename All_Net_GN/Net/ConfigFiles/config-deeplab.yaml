@@ -1,0 +1,20 @@
+# Training configs for Seg
+
+dataset : Oil Dataset
+channels : 7
+n_classes : 2
+ignore_index : 255
+net : DeepLab
+optimizer : SGD
+scheduler : StepLR
+lr : 0.001
+batchsize : 6
+start_epoch : 0
+end_epoch : 150
+result_dir : "./eventfiles-deeplab-channels7-SGD-bs=6-lr=0.001"
+criterion : crossentropy
+logIterval : 20
+valIterval : 2
+resume :
+  flag : False
+  state_path : "./eventfiles-deeplab-channels7/DeepLab-ep114.pth"
